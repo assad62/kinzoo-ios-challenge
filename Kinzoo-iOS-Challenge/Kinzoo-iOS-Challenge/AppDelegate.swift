@@ -9,41 +9,39 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-    var window: UIWindow?
-    var coordinator:Coordinator?
     
-
+    
+    var window: UIWindow?
+    var coordinator:BaseCoordinator?
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         let navController = UINavigationController()
-        coordinator = AppCoordinator(navigationController: navController)
-        coordinator?.start()
-
+        navController.navigationBar.prefersLargeTitles = true
+        
+        
+        coordinator = AppCoordinator(navigationController: navController,
+                                     appConfig:AppConfiguration(baseUrl:"https://rickandmortyapi.com/api/"),
+                                     sessionConfig: AppSessionPolicy(
+                                        configType: .default,
+                                        waitsForConnectivity: true,
+                                        timeOutInterval: 30)
+        )
+        
+        
+        coordinator?.start(path: .list)
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
-            
         
-        
-        
-        
-//         let navController = UINavigationController()
-//         appCoordinator = AppCoordinator(navigationController: navController)
-//         window = UIWindow(frame: UIScreen.main.bounds)
-//         window?.makeKeyAndVisible()
-//         let root = UINavigationController(rootViewController: navController)
-//         window?.rootViewController = root
-//        
-//         appCoordinator?.start()
-       
-         return true
+        return true
     }
-
     
-
-
+    
+    
+    
 }
 

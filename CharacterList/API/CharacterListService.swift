@@ -15,7 +15,7 @@ public protocol APISerivce {
 
 
 public protocol CharListDecorator:APISerivce{
-     func loadList(request: URLRequest) -> AnyPublisher<[Result],Error>
+     func loadList(request: URLRequest) -> AnyPublisher<CharListDTO,Error>
 }
 
 
@@ -29,7 +29,7 @@ public struct CharacterListService:CharListDecorator {
         self.httpClient = httpClient
     }
     
-    public func loadList(request: URLRequest) ->  AnyPublisher<[Result],Error> {
+    public func loadList(request: URLRequest) ->  AnyPublisher<CharListDTO,Error> {
         
         return httpClient
                 .execute(request: request)

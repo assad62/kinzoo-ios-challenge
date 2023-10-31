@@ -1,12 +1,11 @@
 //
-//  URLResquestProvider.swift
-//  CharacterList
+//  URLRequestProvider.swift
+//  CharacterDetail
 //
-//  Created by Development on 29/10/2023.
+//  Created by Development on 30/10/2023.
 //
 
 import Foundation
-
 class URLRequestProvider{
     
     func provideURLRequest(url:String) -> URLRequest?{

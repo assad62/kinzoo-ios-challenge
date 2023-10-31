@@ -9,14 +9,16 @@ import Foundation
 
 
 struct CharacterListMap {
-    static func map(data:Data, response:HTTPURLResponse) throws -> [Result]{
+    static func map(data:Data, response:HTTPURLResponse) throws -> CharListDTO{
         
       if response.statusCode == 200 {
             let decoder = JSONDecoder()
           
                do {
                     let list = try decoder.decode(CharacterList.self, from: data)
-                     return list.results
+                    
+                     return CharListDTO(url: list.info.next ?? "", results: list.results)
+                   
                   } catch let DecodingError.keyNotFound(key, context) {
                       print("Decoding error (keyNotFound): \(key) not found in \(context.debugDescription)")
                       print("Coding path: \(context.codingPath)")
@@ -30,13 +32,14 @@ struct CharacterListMap {
                       print("Decoding error (valueNotFound): value not found for \(type) in \(context.debugDescription)")
                       print("Coding path: \(context.codingPath)")
                   }
-
+ 
+                 return CharListDTO(url: "", results: [])
           
           
            
         }
             
-        return []
+        return CharListDTO(url: "", results: [])
     }
     
     

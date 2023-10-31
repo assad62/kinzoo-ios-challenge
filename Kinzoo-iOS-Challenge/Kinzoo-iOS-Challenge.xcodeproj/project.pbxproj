@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		33F1C3952AED675B0081C478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C3942AED675B0081C478 /* AppDelegate.swift */; };
-		33F1C3992AED675B0081C478 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C3982AED675B0081C478 /* ViewController.swift */; };
 		33F1C39E2AED675D0081C478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F1C39D2AED675D0081C478 /* Assets.xcassets */; };
 		33F1C3AC2AED675D0081C478 /* Kinzoo_iOS_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C3AB2AED675D0081C478 /* Kinzoo_iOS_ChallengeTests.swift */; };
 		33F1C3B62AED675D0081C478 /* Kinzoo_iOS_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C3B52AED675D0081C478 /* Kinzoo_iOS_ChallengeUITests.swift */; };
 		33F1C3B82AED675D0081C478 /* Kinzoo_iOS_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C3B72AED675D0081C478 /* Kinzoo_iOS_ChallengeUITestsLaunchTests.swift */; };
-		33F1C3F22AED7DEB0081C478 /* RemoteAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C3EC2AED6C110081C478 /* RemoteAPI.framework */; };
-		33F1C3F42AEDEB380081C478 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C3F32AEDEB380081C478 /* ViewModel.swift */; };
 		33F1C3F72AEDEB8F0081C478 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C3F62AEDEB8F0081C478 /* AppCoordinator.swift */; };
-		33F1C4252AEDEF5C0081C478 /* CharacterList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C4202AEDEEF00081C478 /* CharacterList.framework */; };
-		33F1C4532AEDF5F40081C478 /* CharacterDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C44E2AEDF3090081C478 /* CharacterDetail.framework */; };
-		33F1C45E2AEDFA0D0081C478 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C45D2AEDFA0D0081C478 /* APIService.swift */; };
+		33F1C4C62AEF257C0081C478 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4C52AEF257C0081C478 /* AppConfiguration.swift */; };
+		33F1C4C82AEF2E8D0081C478 /* NetworkSessionPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4C72AEF2E8D0081C478 /* NetworkSessionPolicy.swift */; };
+		33F1C4F22AF04AC00081C478 /* CharacterDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C44E2AEDF3090081C478 /* CharacterDetail.framework */; };
+		33F1C4F32AF04AC00081C478 /* CharacterDetail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C44E2AEDF3090081C478 /* CharacterDetail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33F1C4F42AF04AC00081C478 /* CharacterList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C4202AEDEEF00081C478 /* CharacterList.framework */; };
+		33F1C4F52AF04AC00081C478 /* CharacterList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C4202AEDEEF00081C478 /* CharacterList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33F1C4F62AF04AC00081C478 /* RemoteAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C3EC2AED6C110081C478 /* RemoteAPI.framework */; };
+		33F1C4F72AF04AC00081C478 /* RemoteAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C3EC2AED6C110081C478 /* RemoteAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33F1C4FB2AF04AE80081C478 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 33F1C4FA2AF04AE80081C478 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,10 +83,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		33F1C4F82AF04AC00081C478 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				33F1C4F52AF04AC00081C478 /* CharacterList.framework in Embed Frameworks */,
+				33F1C4F72AF04AC00081C478 /* RemoteAPI.framework in Embed Frameworks */,
+				33F1C4F32AF04AC00081C478 /* CharacterDetail.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		33F1C3912AED675B0081C478 /* Kinzoo-iOS-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kinzoo-iOS-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F1C3942AED675B0081C478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33F1C3982AED675B0081C478 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33F1C39D2AED675D0081C478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33F1C3A22AED675D0081C478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F1C3A72AED675D0081C478 /* Kinzoo-iOS-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kinzoo-iOS-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,11 +110,11 @@
 		33F1C3B52AED675D0081C478 /* Kinzoo_iOS_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kinzoo_iOS_ChallengeUITests.swift; sourceTree = "<group>"; };
 		33F1C3B72AED675D0081C478 /* Kinzoo_iOS_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kinzoo_iOS_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		33F1C3E62AED6C100081C478 /* RemoteAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RemoteAPI.xcodeproj; path = ../RemoteAPI/RemoteAPI.xcodeproj; sourceTree = "<group>"; };
-		33F1C3F32AEDEB380081C478 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		33F1C3F62AEDEB8F0081C478 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		33F1C41A2AEDEEEF0081C478 /* CharacterList.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CharacterList.xcodeproj; path = ../CharacterList/CharacterList.xcodeproj; sourceTree = "<group>"; };
 		33F1C4482AEDF3090081C478 /* CharacterDetail.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CharacterDetail.xcodeproj; path = ../CharacterDetail/CharacterDetail.xcodeproj; sourceTree = "<group>"; };
-		33F1C45D2AEDFA0D0081C478 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		33F1C4C52AEF257C0081C478 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		33F1C4C72AEF2E8D0081C478 /* NetworkSessionPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionPolicy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +122,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F1C4532AEDF5F40081C478 /* CharacterDetail.framework in Frameworks */,
-				33F1C4252AEDEF5C0081C478 /* CharacterList.framework in Frameworks */,
-				33F1C3F22AED7DEB0081C478 /* RemoteAPI.framework in Frameworks */,
+				33F1C4F42AF04AC00081C478 /* CharacterList.framework in Frameworks */,
+				33F1C4F62AF04AC00081C478 /* RemoteAPI.framework in Frameworks */,
+				33F1C4FB2AF04AE80081C478 /* SDWebImage in Frameworks */,
+				33F1C4F22AF04AC00081C478 /* CharacterDetail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,11 +173,9 @@
 		33F1C3932AED675B0081C478 /* Kinzoo-iOS-Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				33F1C45D2AEDFA0D0081C478 /* APIService.swift */,
+				33F1C4C42AEF25650081C478 /* AppConfig */,
 				33F1C3F62AEDEB8F0081C478 /* AppCoordinator.swift */,
-				33F1C3F32AEDEB380081C478 /* ViewModel.swift */,
 				33F1C3942AED675B0081C478 /* AppDelegate.swift */,
-				33F1C3982AED675B0081C478 /* ViewController.swift */,
 				33F1C39D2AED675D0081C478 /* Assets.xcassets */,
 				33F1C3A22AED675D0081C478 /* Info.plist */,
 			);
@@ -216,6 +233,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		33F1C4C42AEF25650081C478 /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				33F1C4C52AEF257C0081C478 /* AppConfiguration.swift */,
+				33F1C4C72AEF2E8D0081C478 /* NetworkSessionPolicy.swift */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,12 +252,16 @@
 				33F1C38D2AED675B0081C478 /* Sources */,
 				33F1C38E2AED675B0081C478 /* Frameworks */,
 				33F1C38F2AED675B0081C478 /* Resources */,
+				33F1C4F82AF04AC00081C478 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Kinzoo-iOS-Challenge";
+			packageProductDependencies = (
+				33F1C4FA2AF04AE80081C478 /* SDWebImage */,
+			);
 			productName = "Kinzoo-iOS-Challenge";
 			productReference = 33F1C3912AED675B0081C478 /* Kinzoo-iOS-Challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -304,6 +334,9 @@
 				Base,
 			);
 			mainGroup = 33F1C3882AED675B0081C478;
+			packageReferences = (
+				33F1C4F92AF04AE80081C478 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 33F1C3922AED675B0081C478 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -404,11 +437,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F1C4C62AEF257C0081C478 /* AppConfiguration.swift in Sources */,
 				33F1C3F72AEDEB8F0081C478 /* AppCoordinator.swift in Sources */,
-				33F1C45E2AEDFA0D0081C478 /* APIService.swift in Sources */,
-				33F1C3992AED675B0081C478 /* ViewController.swift in Sources */,
-				33F1C3F42AEDEB380081C478 /* ViewModel.swift in Sources */,
 				33F1C3952AED675B0081C478 /* AppDelegate.swift in Sources */,
+				33F1C4C82AEF2E8D0081C478 /* NetworkSessionPolicy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +768,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33F1C4F92AF04AE80081C478 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33F1C4FA2AF04AE80081C478 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33F1C4F92AF04AE80081C478 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 33F1C3892AED675B0081C478 /* Project object */;
 }

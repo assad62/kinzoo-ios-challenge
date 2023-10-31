@@ -17,7 +17,9 @@
 		33F1C4652AEE17B40081C478 /* URLRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4642AEE17B40081C478 /* URLRequestProvider.swift */; };
 		33F1C4682AEEA5330081C478 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4672AEEA5330081C478 /* UITableView+Extensions.swift */; };
 		33F1C46A2AEEA5B30081C478 /* CombineTableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4692AEEA5B30081C478 /* CombineTableView+Extensions.swift */; };
-		33F1C46C2AEEA8100081C478 /* URLStringProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C46B2AEEA8100081C478 /* URLStringProvider.swift */; };
+		33F1C46E2AEEDD9F0081C478 /* CharacterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C46D2AEEDD9F0081C478 /* CharacterListCell.swift */; };
+		33F1C4732AEEE0350081C478 /* CharacterListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4722AEEE0350081C478 /* CharacterListModel.swift */; };
+		33F1C4FE2AF04B3B0081C478 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 33F1C4FD2AF04B3B0081C478 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,9 @@
 		33F1C4642AEE17B40081C478 /* URLRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestProvider.swift; sourceTree = "<group>"; };
 		33F1C4672AEEA5330081C478 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		33F1C4692AEEA5B30081C478 /* CombineTableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CombineTableView+Extensions.swift"; sourceTree = "<group>"; };
-		33F1C46B2AEEA8100081C478 /* URLStringProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStringProvider.swift; sourceTree = "<group>"; };
+		33F1C46D2AEEDD9F0081C478 /* CharacterListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCell.swift; sourceTree = "<group>"; };
+		33F1C4722AEEE0350081C478 /* CharacterListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListModel.swift; sourceTree = "<group>"; };
+		33F1C4E32AF044DE0081C478 /* RemoteAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RemoteAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F1C4FE2AF04B3B0081C478 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,7 @@
 				33F1C4042AEDEEEF0081C478 /* CharacterList */,
 				33F1C40E2AEDEEEF0081C478 /* CharacterListTests */,
 				33F1C4032AEDEEEF0081C478 /* Products */,
+				33F1C4E22AF044DE0081C478 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +97,7 @@
 			children = (
 				33F1C4232AEDEF020081C478 /* CharListViewController.swift */,
 				33F1C4572AEDF6EB0081C478 /* CharListViewModel.swift */,
+				33F1C46D2AEEDD9F0081C478 /* CharacterListCell.swift */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -107,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				33F1C45B2AEDF9140081C478 /* CharListDTO.swift */,
+				33F1C4722AEEE0350081C478 /* CharacterListModel.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -124,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				33F1C4642AEE17B40081C478 /* URLRequestProvider.swift */,
-				33F1C46B2AEEA8100081C478 /* URLStringProvider.swift */,
 			);
 			path = URLProviders;
 			sourceTree = "<group>";
@@ -136,6 +143,14 @@
 				33F1C4692AEEA5B30081C478 /* CombineTableView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		33F1C4E22AF044DE0081C478 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33F1C4E32AF044DE0081C478 /* RemoteAPI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +180,9 @@
 			dependencies = (
 			);
 			name = CharacterList;
+			packageProductDependencies = (
+				33F1C4FD2AF04B3B0081C478 /* SDWebImage */,
+			);
 			productName = CharacterList;
 			productReference = 33F1C4022AEDEEEF0081C478 /* CharacterList.framework */;
 			productType = "com.apple.product-type.framework";
@@ -215,6 +233,9 @@
 				Base,
 			);
 			mainGroup = 33F1C3F82AEDEEEF0081C478;
+			packageReferences = (
+				33F1C4FC2AF04B3B0081C478 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 33F1C4032AEDEEEF0081C478 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,12 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F1C4622AEE089A0081C478 /* CharacterListMap.swift in Sources */,
-				33F1C46C2AEEA8100081C478 /* URLStringProvider.swift in Sources */,
 				33F1C46A2AEEA5B30081C478 /* CombineTableView+Extensions.swift in Sources */,
+				33F1C4732AEEE0350081C478 /* CharacterListModel.swift in Sources */,
 				33F1C4652AEE17B40081C478 /* URLRequestProvider.swift in Sources */,
 				33F1C4582AEDF6EB0081C478 /* CharListViewModel.swift in Sources */,
 				33F1C4682AEEA5330081C478 /* UITableView+Extensions.swift in Sources */,
 				33F1C45C2AEDF9140081C478 /* CharListDTO.swift in Sources */,
+				33F1C46E2AEEDD9F0081C478 /* CharacterListCell.swift in Sources */,
 				33F1C4242AEDEF020081C478 /* CharListViewController.swift in Sources */,
 				33F1C4602AEDFA610081C478 /* CharacterListService.swift in Sources */,
 			);
@@ -535,6 +557,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33F1C4FC2AF04B3B0081C478 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33F1C4FD2AF04B3B0081C478 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33F1C4FC2AF04B3B0081C478 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 33F1C3F92AEDEEEF0081C478 /* Project object */;
 }

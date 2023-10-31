@@ -10,6 +10,15 @@
 		33F1C4392AEDF3090081C478 /* CharacterDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C4302AEDF3090081C478 /* CharacterDetail.framework */; };
 		33F1C43E2AEDF3090081C478 /* CharacterDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C43D2AEDF3090081C478 /* CharacterDetailTests.swift */; };
 		33F1C4522AEDF3240081C478 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4512AEDF3240081C478 /* CharacterDetailViewController.swift */; };
+		33F1C4CA2AEF51D80081C478 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4C92AEF51D80081C478 /* CharacterDetailView.swift */; };
+		33F1C4CC2AEFD7D90081C478 /* CharDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4CB2AEFD7D90081C478 /* CharDetailService.swift */; };
+		33F1C4CF2AEFD8490081C478 /* CharDetailMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4CE2AEFD8490081C478 /* CharDetailMap.swift */; };
+		33F1C4D22AEFD8770081C478 /* CharDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4D12AEFD8770081C478 /* CharDetailModel.swift */; };
+		33F1C4D42AEFDC430081C478 /* CharDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4D32AEFDC430081C478 /* CharDetailDTO.swift */; };
+		33F1C4D62AEFF39A0081C478 /* CharDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4D52AEFF39A0081C478 /* CharDetailViewModel.swift */; };
+		33F1C4D92AF017270081C478 /* URLRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4D82AF017270081C478 /* URLRequestProvider.swift */; };
+		33F1C4DE2AF0235F0081C478 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 33F1C4DD2AF0235F0081C478 /* SDWebImage */; };
+		33F1C4E12AF03A200081C478 /* HeadingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4E02AF03A200081C478 /* HeadingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,14 @@
 		33F1C4382AEDF3090081C478 /* CharacterDetailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharacterDetailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F1C43D2AEDF3090081C478 /* CharacterDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTests.swift; sourceTree = "<group>"; };
 		33F1C4512AEDF3240081C478 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		33F1C4C92AEF51D80081C478 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		33F1C4CB2AEFD7D90081C478 /* CharDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailService.swift; sourceTree = "<group>"; };
+		33F1C4CE2AEFD8490081C478 /* CharDetailMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailMap.swift; sourceTree = "<group>"; };
+		33F1C4D12AEFD8770081C478 /* CharDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailModel.swift; sourceTree = "<group>"; };
+		33F1C4D32AEFDC430081C478 /* CharDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailDTO.swift; sourceTree = "<group>"; };
+		33F1C4D52AEFF39A0081C478 /* CharDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailViewModel.swift; sourceTree = "<group>"; };
+		33F1C4D82AF017270081C478 /* URLRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestProvider.swift; sourceTree = "<group>"; };
+		33F1C4E02AF03A200081C478 /* HeadingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F1C4DE2AF0235F0081C478 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +69,10 @@
 		33F1C4262AEDF3090081C478 = {
 			isa = PBXGroup;
 			children = (
+				33F1C4DF2AF039820081C478 /* UI */,
+				33F1C4D72AF017110081C478 /* URLProviders */,
+				33F1C4D02AEFD8650081C478 /* DTO */,
+				33F1C4CD2AEFD7E10081C478 /* API */,
 				33F1C4322AEDF3090081C478 /* CharacterDetail */,
 				33F1C43C2AEDF3090081C478 /* CharacterDetailTests */,
 				33F1C4312AEDF3090081C478 /* Products */,
@@ -70,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				33F1C4512AEDF3240081C478 /* CharacterDetailViewController.swift */,
+				33F1C4C92AEF51D80081C478 /* CharacterDetailView.swift */,
+				33F1C4D52AEFF39A0081C478 /* CharDetailViewModel.swift */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -80,6 +104,40 @@
 				33F1C43D2AEDF3090081C478 /* CharacterDetailTests.swift */,
 			);
 			path = CharacterDetailTests;
+			sourceTree = "<group>";
+		};
+		33F1C4CD2AEFD7E10081C478 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				33F1C4CB2AEFD7D90081C478 /* CharDetailService.swift */,
+				33F1C4CE2AEFD8490081C478 /* CharDetailMap.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		33F1C4D02AEFD8650081C478 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				33F1C4D12AEFD8770081C478 /* CharDetailModel.swift */,
+				33F1C4D32AEFDC430081C478 /* CharDetailDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		33F1C4D72AF017110081C478 /* URLProviders */ = {
+			isa = PBXGroup;
+			children = (
+				33F1C4D82AF017270081C478 /* URLRequestProvider.swift */,
+			);
+			path = URLProviders;
+			sourceTree = "<group>";
+		};
+		33F1C4DF2AF039820081C478 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				33F1C4E02AF03A200081C478 /* HeadingLabel.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +167,9 @@
 			dependencies = (
 			);
 			name = CharacterDetail;
+			packageProductDependencies = (
+				33F1C4DD2AF0235F0081C478 /* SDWebImage */,
+			);
 			productName = CharacterDetail;
 			productReference = 33F1C4302AEDF3090081C478 /* CharacterDetail.framework */;
 			productType = "com.apple.product-type.framework";
@@ -159,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 33F1C4262AEDF3090081C478;
+			packageReferences = (
+				33F1C4DC2AF0235F0081C478 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 33F1C4312AEDF3090081C478 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,7 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F1C4D62AEFF39A0081C478 /* CharDetailViewModel.swift in Sources */,
 				33F1C4522AEDF3240081C478 /* CharacterDetailViewController.swift in Sources */,
+				33F1C4D92AF017270081C478 /* URLRequestProvider.swift in Sources */,
+				33F1C4CF2AEFD8490081C478 /* CharDetailMap.swift in Sources */,
+				33F1C4E12AF03A200081C478 /* HeadingLabel.swift in Sources */,
+				33F1C4D22AEFD8770081C478 /* CharDetailModel.swift in Sources */,
+				33F1C4CA2AEF51D80081C478 /* CharacterDetailView.swift in Sources */,
+				33F1C4D42AEFDC430081C478 /* CharDetailDTO.swift in Sources */,
+				33F1C4CC2AEFD7D90081C478 /* CharDetailService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +543,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33F1C4DC2AF0235F0081C478 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33F1C4DD2AF0235F0081C478 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33F1C4DC2AF0235F0081C478 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 33F1C4272AEDF3090081C478 /* Project object */;
 }
