@@ -11,7 +11,11 @@ import Combine
 import SDWebImage
 
 
+extension UITableView {
 
+   
+
+}
 
 public class CharListViewController:UIViewController{
     
@@ -33,49 +37,43 @@ public class CharListViewController:UIViewController{
     }
     
     public override func viewDidAppear(_ animated: Bool) {
-        self.vm.loadList(url: self.vm.input.initialUrl ?? "")
+        self.tableView.deselectSelectedRow(animated: true)
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
         safeArea = view.layoutMarginsGuide
         
+        self.vm.loadList(url: self.vm.input.initialUrl ?? "")
       
         
         setupTableView()
         
         
-        
-        cancellable = vm.$result.sink(receiveValue: tableView.items { tableView, indexPath, item in
-            
+        cancellable = vm.output.charList.sink(receiveValue: tableView.items { tableView, indexPath, item in
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CharacterListCell
             
             
-            guard  let cell = cell else {
-                
-                return UITableViewCell()
-            }
-          
+                        guard  let cell = cell else {
+            
+                            return UITableViewCell()
+                        }
             
             
-            cell.charName.text = item.name
-            cell.charImageView.sd_setImage(
-              with: URL(string: item.image),
-              completed: { (image, err, cacheType, url) in
-                                
-                                if err != nil {
-                                    print(err!)
-                                    return
-                                }
-
-            })
             
-            return cell
+                        cell.charName.text = item.name
+                        cell.charImageView.sd_setImage(
+                          with: URL(string: item.image),
+                          completed: { (image, err, cacheType, url) in
+            
+                                            if err != nil {
+                                                print(err!)
+                                                return
+                                            }
+            
+                        })
+            
+                        return cell
         })
-        
-        
-       
-        
-        
         
     }
     
@@ -124,8 +122,7 @@ extension CharListViewController:UITableViewDelegate{
         // need to pass your indexpath then it showing your indicator at bottom
         tableView.addLoading(indexPath) {
             // add your code here
-            // append Your array and reload your tableview
-            self.vm.loadList(url: self.vm.url)
+            self.vm.loadList(url: self.vm.output.url.value)
             tableView.stopLoading() // stop your indicator
         }
     }

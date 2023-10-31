@@ -17,10 +17,12 @@ protocol ViewModelType{
     var output: Output { get }
 }
 
+
+
+
 public class CharListViewModel:ViewModelType{
     
-     @Published private (set) var result:[Result] = []
-     @Published private (set) var url:String = ""
+    
     
      struct Input {
          let initialUrl:String?
@@ -29,7 +31,8 @@ public class CharListViewModel:ViewModelType{
      }
        
       struct Output {
-         
+          let charList = CurrentValueSubject<[Result], Never>([])
+          let url = CurrentValueSubject<String,Never>("")
       }
        
       let input: Input
@@ -57,14 +60,18 @@ public class CharListViewModel:ViewModelType{
             return
         }
         
+        
+        
         self.input.charService.loadList(request: urlRequest)
             .sink { completion in
             } receiveValue: { [unowned self] listData in
-               // self.result.removeAll()
-                self.url = listData.url
-                self.result.append(contentsOf: listData.results)
+               
+                self.output.url.send(listData.url)
+                self.output.charList.value.append(contentsOf: listData.results)
             }
             .store(in: &cancellable)
+        
+        
     }
        
     
