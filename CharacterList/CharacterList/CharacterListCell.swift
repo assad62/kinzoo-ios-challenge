@@ -48,7 +48,7 @@ class CharacterListCell: UITableViewCell {
         //Important: As image takes longer to load than label, if we dont set a height for the imageView the tableview cell will ignore the image and just load with the height of the label
         
         NSLayoutConstraint.activate([
-            charImageView.heightAnchor.constraint(equalToConstant: 300),
+            charImageView.heightAnchor.constraint(equalToConstant: 150),
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 20),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),

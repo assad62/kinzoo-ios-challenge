@@ -11,12 +11,6 @@ import Combine
 import SDWebImage
 
 
-extension UITableView {
-
-   
-
-}
-
 public class CharListViewController:UIViewController{
     
     

@@ -32,11 +32,14 @@ public class CharacterDetailView:UIView{
     let episodesList:UILabel = {
         let textLabel = UILabel()
         textLabel.numberOfLines = 0
-        //set this as false to scroll the entire page
-        //textView.isScrollEnabled = false
+        
         return textLabel
     }()
     
+    let headerNameTitle:String
+    let headerStatusTitle:String
+    let headerSpeciesTitle:String
+    let headerEpisodeListTitle:String
     
     var charImageView: UIImageView = {
         let img = UIImageView()
@@ -45,11 +48,13 @@ public class CharacterDetailView:UIView{
         return img
     }()
     
-    override init(frame:CGRect){
-        super.init(frame: frame)
-    }
+   
     
-    required init() {
+    public required init(headerNameTitle:String, headerStatusTitle:String, headerSpeciesTitle:String,headerEpisodeListTitle:String) {
+        self.headerNameTitle = headerNameTitle
+        self.headerStatusTitle = headerStatusTitle
+        self.headerSpeciesTitle = headerSpeciesTitle
+        self.headerEpisodeListTitle = headerEpisodeListTitle
         
         super.init(frame: CGRect.zero)
         addSubview(scrollView)
@@ -95,10 +100,10 @@ public class CharacterDetailView:UIView{
     
     func setupView(){
         
-        headerName.text = "Name"
-        headerStatus.text = "Status"
-        headerSpecies.text = "Species"
-        headerEpisodeList.text = "Episode List"
+        headerName.text = headerNameTitle
+        headerStatus.text = headerStatusTitle
+        headerSpecies.text = headerSpeciesTitle
+        headerEpisodeList.text = headerEpisodeListTitle
         
         stackView.addArrangedSubview(charImageView)
         

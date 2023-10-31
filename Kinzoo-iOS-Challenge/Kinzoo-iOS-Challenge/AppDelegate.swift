@@ -25,9 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator = AppCoordinator(navigationController: navController,
                                      appConfig:AppConfiguration(baseUrl:"https://rickandmortyapi.com/api/"),
                                      sessionConfig: AppSessionPolicy(
-                                        configType: .default,
-                                        waitsForConnectivity: true,
-                                        timeOutInterval: 30)
+                                     configType: .default,
+                                     waitsForConnectivity: true,
+                                     timeOutInterval: 30)
         )
         
         

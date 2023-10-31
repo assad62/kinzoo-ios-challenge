@@ -59,10 +59,10 @@ class AppCoordinator:AppCordinatorDecorator {
         
         switch path {
            case.list:
-             navigationController.pushViewController(composeListView(), animated: true)
+              goToListView()
             
           case .detail:
-             navigationController.pushViewController(composeDetailView(), animated: true)
+             goToDetailView()
         }
        
        
@@ -93,7 +93,12 @@ class AppCoordinator:AppCordinatorDecorator {
        
         let url = "\(appConfig.getBaseUrl())\(getUrlPath(path: .detail))".replacingOccurrences(of: ":id", with: "\(index+1)")
       
-        let view = CharacterDetailView()
+        let view = CharacterDetailView(
+            headerNameTitle: "Name",
+            headerStatusTitle: "Status",
+            headerSpeciesTitle: "Species",
+            headerEpisodeListTitle: "Episode List")
+        
         let service = CharDetailService(httpClient: URLSession(configuration: sessionConfig.getUrlSessionConfig()))
       
         let vm = CharDetailViewModel(index: index, charDetailService: service,url: url)
@@ -103,7 +108,12 @@ class AppCoordinator:AppCordinatorDecorator {
     }
     
     
-    func goToDetailView(index:Int)  {
+    func goToListView(){
+        let vc = composeListView()
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToDetailView(index:Int = 1)  {
         let vc = composeDetailView(index: index)
         navigationController.pushViewController(vc, animated: true)
     }
