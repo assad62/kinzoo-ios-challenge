@@ -16,8 +16,14 @@ struct CharacterListMap {
           
                do {
                     let list = try decoder.decode(CharacterList.self, from: data)
-                    
-                     return CharListDTO(url: list.info.next ?? "", results: list.results)
+                     
+                   var arr = [CharResult]()
+                   
+                   list.results.forEach { result in
+                       arr.append(CharResult(image: result.image, name: result.name))
+                   }
+                   
+                   return CharListDTO(url: list.info.next ?? "", results: arr)
                    
                   } catch let DecodingError.keyNotFound(key, context) {
                       print("Decoding error (keyNotFound): \(key) not found in \(context.debugDescription)")

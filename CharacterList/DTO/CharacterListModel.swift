@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+
 // MARK: - CharacterList
 struct CharacterList: Codable {
     let info: Info
@@ -21,7 +23,7 @@ struct Info: Codable {
 }
 
 // MARK: - Result
-public struct Result: Codable {
+struct Result: Codable {
     let id: Int
     let name: String
     let status: Status

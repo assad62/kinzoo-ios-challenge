@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		339694242AF157E100C2F02E /* CharListServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339694232AF157E100C2F02E /* CharListServiceTest.swift */; };
+		339694262AF1594B00C2F02E /* MockCharacterListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339694252AF1594B00C2F02E /* MockCharacterListService.swift */; };
 		33F1C40B2AEDEEEF0081C478 /* CharacterList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1C4022AEDEEEF0081C478 /* CharacterList.framework */; };
 		33F1C4102AEDEEEF0081C478 /* CharacterListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C40F2AEDEEEF0081C478 /* CharacterListTests.swift */; };
 		33F1C4242AEDEF020081C478 /* CharListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C4232AEDEF020081C478 /* CharListViewController.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		339694232AF157E100C2F02E /* CharListServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharListServiceTest.swift; sourceTree = "<group>"; };
+		339694252AF1594B00C2F02E /* MockCharacterListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterListService.swift; sourceTree = "<group>"; };
 		33F1C4022AEDEEEF0081C478 /* CharacterList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CharacterList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F1C40A2AEDEEEF0081C478 /* CharacterListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharacterListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F1C40F2AEDEEEF0081C478 /* CharacterListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListTests.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				33F1C40F2AEDEEEF0081C478 /* CharacterListTests.swift */,
+				339694232AF157E100C2F02E /* CharListServiceTest.swift */,
 			);
 			path = CharacterListTests;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			children = (
 				33F1C45F2AEDFA610081C478 /* CharacterListService.swift */,
 				33F1C4612AEE089A0081C478 /* CharacterListMap.swift */,
+				339694252AF1594B00C2F02E /* MockCharacterListService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F1C4102AEDEEEF0081C478 /* CharacterListTests.swift in Sources */,
+				339694262AF1594B00C2F02E /* MockCharacterListService.swift in Sources */,
+				339694242AF157E100C2F02E /* CharListServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Combine
+import Network
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     
     var window: UIWindow?
     var coordinator:BaseCoordinator?
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = UINavigationController()
         navController.navigationBar.prefersLargeTitles = true
         
+        
+       
         
         coordinator = AppCoordinator(navigationController: navController,
                                      appConfig:AppConfiguration(baseUrl:"https://rickandmortyapi.com/api/"),

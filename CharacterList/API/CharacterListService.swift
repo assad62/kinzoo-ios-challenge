@@ -18,8 +18,6 @@ public protocol CharListDecorator:APISerivce{
      func loadList(request: URLRequest) -> AnyPublisher<CharListDTO,Error>
 }
 
-
-
 public struct CharacterListService:CharListDecorator {
     
     

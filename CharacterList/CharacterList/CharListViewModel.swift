@@ -31,7 +31,7 @@ public class CharListViewModel:ViewModelType{
      }
        
       struct Output {
-          let charList = CurrentValueSubject<[Result], Never>([])
+          let charList = CurrentValueSubject<[CharResult], Never>([])
           let url = CurrentValueSubject<String,Never>("")
       }
        

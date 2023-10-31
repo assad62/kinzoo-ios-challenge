@@ -6,11 +6,16 @@
 //
 
 import XCTest
+import RemoteAPI
+import Combine
+
 @testable import CharacterList
 
 final class CharacterListTests: XCTestCase {
-
+    
+  
     override func setUpWithError() throws {
+       
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 

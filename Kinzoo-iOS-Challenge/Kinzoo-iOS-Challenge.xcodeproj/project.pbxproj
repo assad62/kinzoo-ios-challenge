@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		339694222AF0BBD300C2F02E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339694212AF0BBD300C2F02E /* NetworkMonitor.swift */; };
 		33F1C3952AED675B0081C478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C3942AED675B0081C478 /* AppDelegate.swift */; };
 		33F1C39E2AED675D0081C478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F1C39D2AED675D0081C478 /* Assets.xcassets */; };
 		33F1C3AC2AED675D0081C478 /* Kinzoo_iOS_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F1C3AB2AED675D0081C478 /* Kinzoo_iOS_ChallengeTests.swift */; };
@@ -100,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		339694212AF0BBD300C2F02E /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		33F1C3912AED675B0081C478 /* Kinzoo-iOS-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kinzoo-iOS-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F1C3942AED675B0081C478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33F1C39D2AED675D0081C478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		33F1C3932AED675B0081C478 /* Kinzoo-iOS-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				339694212AF0BBD300C2F02E /* NetworkMonitor.swift */,
 				33F1C4C42AEF25650081C478 /* AppConfig */,
 				33F1C3F62AEDEB8F0081C478 /* AppCoordinator.swift */,
 				33F1C3942AED675B0081C478 /* AppDelegate.swift */,
@@ -437,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				339694222AF0BBD300C2F02E /* NetworkMonitor.swift in Sources */,
 				33F1C4C62AEF257C0081C478 /* AppConfiguration.swift in Sources */,
 				33F1C3F72AEDEB8F0081C478 /* AppCoordinator.swift in Sources */,
 				33F1C3952AED675B0081C478 /* AppDelegate.swift in Sources */,

@@ -7,9 +7,27 @@
 
 import Foundation
 
-
-public struct CharListDTO{
+//conform to equtable for mock
+public struct CharListDTO:Equatable{
+    public static func == (lhs: CharListDTO, rhs: CharListDTO) -> Bool {
+        return lhs.results == rhs.results && lhs.url == rhs.url
+    }
+    
+    public init(url: String, results: [CharResult]) {
+        self.url = url
+        self.results = results
+    }
+    
     let url:String
-    let results:[Result]
+    let results:[CharResult]
 }
 
+public struct CharResult:Equatable {
+    
+    public init(image: String, name: String) {
+        self.image = image
+        self.name = name
+    }
+    let image:String
+    let name:String
+}
